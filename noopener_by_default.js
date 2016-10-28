@@ -23,8 +23,8 @@ function updateTargets() {
             var found = target.rel.split(" ").some(function(rel) {
                 return ["noopener", "noreferrer"].indexOf(rel.toLowerCase()) > -1;
             });
-            target.rel += " noopener";
             if (!found) {
+                target.rel += " noopener";
                 urls.push(target.href);
             }
         } else {
